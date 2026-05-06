@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crop Prediction - CropSense AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="dots" class="bg-dots" aria-hidden="true"></canvas>
+
+  <main class="soil-page-wrap crop-page-wrap">
+    <header class="soil-topbar">
+      <div class="crop-brand">
+        <div class="crop-brand-icon">
+          <svg viewBox="0 0 64 64" class="crop-brand-svg">
+            <path d="M30 52V23" stroke="#111827" stroke-width="3.2" stroke-linecap="round" />
+            <path d="M30 26c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#d2de27" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 34c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#d2de27" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 34c0-7-5-12-11-13 0 7 4 12 11 13Z" fill="#5dd45d" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 52c0-8 3-13 9-18" stroke="#ff9d4d" stroke-width="4.2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h1>Crop <span>Prediction</span></h1>
+      </div>
+
+      <nav class="soil-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="crop-prediction.html" class="is-active">Prediction</a>
+        <a href="performance-analysis.html">Performance</a>
+      </nav>
+    </header>
+
+    <section class="crop-main-card">
+      <div class="crop-hero">
+        <div class="crop-hero-icon">
+          <svg viewBox="0 0 64 64" class="crop-hero-svg">
+            <path d="M30 52V23" stroke="#111827" stroke-width="3.2" stroke-linecap="round" />
+            <path d="M30 26c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#f7c948" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 34c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#f7c948" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 42c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#f7c948" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 34c0-7-5-12-11-13 0 7 4 12 11 13Z" fill="#3ecf6c" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M30 44c0-7-5-12-11-13 0 7 4 12 11 13Z" fill="#3ecf6c" stroke="#111827" stroke-width="2.5"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h2>Crop <span>Prediction</span></h2>
+        <p>Enter soil and environmental parameters to predict the optimal crop</p>
+      </div>
+
+      <div class="crop-info-banner">
+        <span>📊 This ML model analyzes soil nutrients, weather conditions, and pH levels to recommend the most suitable
+          crop for your land.</span>
+      </div>
+
+      <form class="crop-form" id="cropPredictionForm" action="#" method="get">
+        <div class="crop-form-grid">
+          <label class="crop-field">
+            <span>🧪 Nitrogen (N)</span>
+            <input id="nitrogenInput" type="number" placeholder="e.g. 90" required>
+          </label>
+
+          <label class="crop-field">
+            <span>🧪 Phosphorus (P)</span>
+            <input id="phosphorusInput" type="number" placeholder="e.g. 42" required>
+          </label>
+
+          <label class="crop-field">
+            <span>🧪 Potassium (K)</span>
+            <input id="potassiumInput" type="number" placeholder="e.g. 43" required>
+          </label>
+
+          <label class="crop-field">
+            <span>🌡 Temperature (°C)</span>
+            <input id="temperatureInput" type="number" step="0.1" placeholder="e.g. 20.5" required>
+
+          </label>
+
+          <label class="crop-field">
+            <span>💧 Humidity (%)</span>
+            <input id="humidityInput" type="number" step="0.1" placeholder="e.g. 82.0" required>
+
+          </label>
+
+          <label class="crop-field">
+            <span>🌱 pH Value</span>
+            <input id="phInput" type="number" step="0.1" placeholder="e.g. 6.5" required>
+
+          </label>
+
+          <label class="crop-field crop-field-full">
+            <span>🌧 Rainfall (mm)</span>
+            <input id="rainfallInput" type="number" step="0.1" placeholder="e.g. 202.9" required>
+
+          </label>
+        </div>
+
+        <button class="crop-submit-btn" id="predictCropBtn" type="submit">🌾 PREDICT CROP</button>
+
+        <div class="crop-result-card" id="cropResultCard">
+          <div class="crop-result-icon">✨</div>
+          <p class="crop-result-label">Recommended Crop:</p>
+          <h3 id="predictedCropText">rice</h3>
+          <button type="button" class="download-report-btn" id="downloadCropPdfBtn">📄 Download PDF Report</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performance Analysis - CropSense AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="dots" class="bg-dots" aria-hidden="true"></canvas>
+
+  <main class="soil-page-wrap performance-page-wrap">
+    <header class="soil-topbar">
+      <div class="soil-brand">
+        <div class="soil-brand-icon">🔬</div>
+        <h1>Soil <span>Analysis</span></h1>
+      </div>
+
+      <nav class="soil-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="soil-analysis.html">Upload</a>
+        <a href="performance.html" class="is-active">Performance</a>
+        <a href="charts.html">Chart</a>
+      </nav>
+    </header>
+
+    <section class="performance-hero">
+      <div class="performance-icon">📊</div>
+      <h2>Performance <span>Analysis</span></h2>
+      <p>Deep Learning Model Evaluation Metrics</p>
+    </section>
+
+    <section class="performance-model-banner">
+      <h3>🤖 Model Architecture</h3>
+      <p>MobileNetV2 - Convolutional Neural Network optimized for image classification</p>
+    </section>
+
+    <section class="performance-specs-card">
+      <h3>🔧 Model Specifications</h3>
+      <ul class="performance-spec-list">
+        <li>Architecture: MobileNetV2 (Transfer Learning)</li>
+        <li>Input Size: 128x128x3 RGB images</li>
+        <li>Optimizer: Adam with categorical crossentropy loss</li>
+        <li>Classes: 4 soil types (Alluvial, Black, Clay, Red)</li>
+      </ul>
+    </section>
+
+    <section class="performance-metric-cards">
+      <article class="perf-metric-card">
+        <h4>ACCURACY</h4>
+        <div class="perf-metric-value">99%</div>
+        <p>Overall Classification Rate</p>
+      </article>
+
+      <article class="perf-metric-card">
+        <h4>PRECISION</h4>
+        <div class="perf-metric-value">0.99</div>
+        <p>Prediction Correctness</p>
+      </article>
+
+      <article class="perf-metric-card">
+        <h4>RECALL</h4>
+        <div class="perf-metric-value">0.99</div>
+        <p>True Positive Rate</p>
+      </article>
+
+      <article class="perf-metric-card">
+        <h4>F1-SCORE</h4>
+        <div class="perf-metric-value">0.99</div>
+        <p>Harmonic Mean</p>
+      </article>
+    </section>
+
+    <section class="performance-table-card">
+      <h3>Detailed <span>Metrics</span></h3>
+
+      <div class="performance-table-wrap">
+        <table class="performance-table">
+          <thead>
+            <tr>
+              <th>METRIC</th>
+              <th>VALUE</th>
+              <th>DESCRIPTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accuracy</td>
+              <td>0.99</td>
+              <td>Percentage of correctly classified soil images</td>
+            </tr>
+            <tr>
+              <td>Precision</td>
+              <td>0.99</td>
+              <td>Ratio of true positive to total positive predictions</td>
+            </tr>
+            <tr>
+              <td>Recall</td>
+              <td>0.99</td>
+              <td>Ratio of true positive to actual positive samples</td>
+            </tr>
+            <tr>
+              <td>F-Measure</td>
+              <td>0.99</td>
+              <td>Weighted average of precision and recall</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="performance-chart-section">
+      <h3>Confusion <span>Matrix</span></h3>
+
+      <div class="performance-chart-card">
+        <h4>Model Performance Visualization</h4>
+        <p>Visual representation of classification accuracy across all soil types</p>
+
+        <div class="confusion-chart-frame">
+          <img src="assets/confusion-matrix.png" alt="Confusion Matrix">
+        </div>
+      </div>
+    </section>
+
+    <section class="performance-insights-card">
+      <h3>💡 Key Insights</h3>
+      <ul>
+        <li>Model achieves 99% accuracy on test dataset</li>
+        <li>Minimal false positives across all soil categories</li>
+        <li>Balanced performance across all 4 soil types</li>
+        <li>Ready for production deployment</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

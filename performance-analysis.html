@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crop Prediction - Performance Dashboard</title>
+  <link rel="stylesheet" href="styles1.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+    
+<div class="navbar">
+  <h2>🌱 Crop Prediction</h2>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="crop-prediction.html">Prediction</a>
+    <a href="performance-analysis.html" class="active">Performance</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Performance <span>Analysis</span></h1>
+  <p>Model evaluation metrics and accuracy statistics</p>
+</div>
+
+<div class="card">
+  <h3>📊 About These Metrics</h3>
+  <p><b>Precision:</b> How many predicted crops were actually correct</p>
+  <p><b>Recall:</b> How many actual crops were correctly identified</p>
+  <p><b>F1-Score:</b> Harmonic mean of precision and recall</p>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <h3 id="overallAccuracy"></h3>
+    <p>Excellent Performance</p>
+  </div>
+
+  <div class="stat-card">
+    <h3 id="avgPrecision"></h3>
+    <p>High Confidence</p>
+  </div>
+
+  <div class="stat-card">
+    <h3 id="avgRecall"></h3>
+    <p>Good Coverage</p>
+  </div>
+
+  <div class="stat-card">
+    <h3 id="avgF1"></h3>
+    <p>Balanced Results</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Crop-wise Performance Metrics</h2>
+  <table id="cropTable">
+    <thead>
+      <tr>
+        <th>CROP NAME</th>
+        <th>RECALL</th>
+        <th>F1-SCORE</th>
+        <th>PRECISION</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="chart-box">
+  <h2 class="heading2">Confusion Matrix</h2>
+  <div id="confusionContainer"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+  <script src="script.js"></script>
+</body>
+</html>

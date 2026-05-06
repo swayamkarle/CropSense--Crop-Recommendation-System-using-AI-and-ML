@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CropSense AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="dots" class="bg-dots" aria-hidden="true"></canvas>
+
+  <main class="dashboard-wrap">
+    <header class="dashboard-topbar">
+      <div class="dashboard-brand">
+        <img src="assets/logo_icon.png" alt="CropSense AI logo" class="dashboard-brand-logo" onerror="this.style.display='none';">
+        <span>CropSense AI</span>
+      </div>
+
+      <a href="login.html" class="dashboard-logout">Logout</a>
+    </header>
+
+    <section class="dashboard-hero">
+      <div class="dashboard-hero-icon">👋</div>
+      <h1>Smart Agriculture with <span>AI</span></h1>
+      <p>for Crop Recommendation using Weather and Soil Content.</p>
+    </section>
+
+    <section class="analysis-section">
+      <h2>Select Your <span>Analysis Type</span></h2>
+
+      <div class="analysis-grid">
+        <article class="analysis-option-card">
+          <div class="analysis-card-top">
+            <div class="analysis-icon-box">
+              <svg viewBox="0 0 64 64" class="analysis-svg">
+                <rect x="18" y="14" width="18" height="28" rx="4" fill="#f5f7fb" stroke="#111827" stroke-width="2.5"/>
+                <circle cx="29" cy="23" r="3.5" fill="#d1d5db"/>
+                <rect x="14" y="40" width="26" height="4" fill="#f5f7fb" stroke="#111827" stroke-width="2.5"/>
+                <rect x="11" y="44" width="32" height="4" fill="#f5f7fb" stroke="#111827" stroke-width="2.5"/>
+              </svg>
+            </div>
+
+            <div>
+              <h3>Soil Analysis</h3>
+              <span class="analysis-tag">Deep Learning</span>
+            </div>
+          </div>
+
+          <p class="analysis-desc">
+            Upload soil images and get instant analysis using advanced Deep Learning
+            technology. Identify soil types and receive personalized crop
+            recommendations.
+          </p>
+
+          <ul class="analysis-features">
+            <li>Image-based soil classification</li>
+            <li>4 soil types detection (Alluvial, Black, Clay, Red)</li>
+            <li>Intelligent crop recommendations</li>
+            <li>Real-time performance metrics</li>
+            <li>Interactive visualization charts</li>
+          </ul>
+
+          <a href="soil-analysis.html" class="analysis-action">Launch Analysis <span>→</span></a>
+        </article>
+
+        <article class="analysis-option-card">
+          <div class="analysis-card-top">
+            <div class="analysis-icon-box">
+              <svg viewBox="0 0 64 64" class="analysis-svg">
+                <path d="M30 52V23" stroke="#111827" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M30 26c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#d2de27" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M30 34c0-8 6-13 14-13-1 8-7 13-14 13Z" fill="#d2de27" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M30 34c0-7-5-12-11-13 0 7 4 12 11 13Z" fill="#5dd45d" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M30 52c0-8 3-13 9-18" stroke="#ff9d4d" stroke-width="4.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div>
+              <h3>Crop Prediction</h3>
+              <span class="analysis-tag">Machine Learning</span>
+            </div>
+          </div>
+
+          <p class="analysis-desc">
+            Predict optimal crops based on environmental parameters using advanced
+            Machine Learning algorithms. Get data-driven farming insights.
+          </p>
+
+          <ul class="analysis-features">
+            <li>ML-based crop prediction engine</li>
+            <li>Multi-parameter environmental analysis</li>
+            <li>CSV dataset upload & preview</li>
+            <li>Export Results to PDF</li>
+            <li>Comprehensive accuracy reports</li>
+          </ul>
+
+          <a href="crop-prediction.html" class="analysis-action">Launch Prediction <span>→</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

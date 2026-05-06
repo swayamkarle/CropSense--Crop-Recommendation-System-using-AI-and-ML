@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soil Analysis Result - CropSense AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="dots" class="bg-dots" aria-hidden="true"></canvas>
+
+  <main class="soil-page-wrap">
+    <header class="soil-topbar">
+      <div class="soil-brand">
+        <div class="soil-brand-icon">🔬</div>
+        <h1>Soil <span>Analysis</span></h1>
+      </div>
+
+      <nav class="soil-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="is-active" href="soil-analysis.html">Upload</a>
+        <a href="performance.html">Performance</a>
+        <a href="charts.html">Charts</a>
+      </nav>
+    </header>
+
+    <section class="soil-main-card result-main-card">
+      <div class="result-header">
+        <div class="result-check">✅</div>
+        <h2>Analysis <span>Complete</span></h2>
+        <p>AI-powered soil classification and crop recommendations</p>
+      </div>
+
+      <div class="result-grid">
+        <div class="result-image-panel">
+          <h3>📷 Uploaded Image</h3>
+          <div class="result-image-frame">
+            <img id="resultPreviewImage" src="" alt="Uploaded soil image" />
+          </div>
+        </div>
+
+        <div class="result-side-panels">
+          <article class="result-info-card success-card">
+            <h3>🎯 SOIL TYPE DETECTED</h3>
+            <div class="detected-type" id="detectedSoilType">Alluvial_Soil</div>
+            <div class="success-pill">✓ Analysis Successful</div>
+          </article>
+
+          <article class="result-info-card">
+            <h3>🌾 Recommended Crops</h3>
+            <p id="recommendedCropsText"></p>
+          </article>
+
+          <article class="result-info-card download-card">
+            <h3>📤 Download Report</h3>
+            <a href="soil-report.html" class="download-report-btn">📄 Download PDF</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="result-stats-grid">
+        <article class="result-stat-card">
+          <div class="result-stat-icon">🔬</div>
+          <h4>Deep Learning</h4>
+          <p>MobileNetV2 CNN Model</p>
+        </article>
+
+        <article class="result-stat-card">
+          <div class="result-stat-icon">📊</div>
+          <h4>Accuracy</h4>
+          <p>99% Classification Rate</p>
+        </article>
+
+        <article class="result-stat-card">
+          <div class="result-stat-icon">⚡</div>
+          <h4>Fast Analysis</h4>
+          <p>Instant Results</p>
+        </article>
+
+        <article class="result-stat-card">
+          <div class="result-stat-icon">🌱</div>
+          <h4>Crop Suggestions</h4>
+          <p>Data-driven Recommendations</p>
+        </article>
+      </div>
+
+      <div class="result-actions">
+        <a href="soil-analysis.html" class="result-action-primary">🔄 Analyze Another</a>
+        <a href="performance.html" class="result-action-secondary">📈 View Performance</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    const resultImage = document.getElementById("resultPreviewImage");
+    const detectedSoilType = document.getElementById("detectedSoilType");
+    const recommendedCropsText = document.getElementById("recommendedCropsText");
+
+    const storedImage = localStorage.getItem("soilUploadedImage");
+    const storedType = localStorage.getItem("soilDetectedType") || "Alluvial_Soil";
+    const storedCrops = localStorage.getItem("soilRecommendedCrops") || "Rice, Wheat, Sugarcane, Maize, Cotton, Soyabean, Jute";
+
+    if (storedImage) resultImage.src = storedImage;
+    detectedSoilType.textContent = storedType;
+    recommendedCropsText.textContent = `${storedType} (This soil is suitable for the crops:- { ${storedCrops} })`;
+  </script>
+</body>
+</html>

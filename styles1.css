@@ -1,0 +1,192 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0f2f2f, #071224 70%);
+  color: #cfe8fb;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  margin: 15px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar h2 {
+  color: #7ef5b2;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: #cfe8fb;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(46, 204, 113, 0.15);
+}
+
+.nav-links .active {
+  background: #1f7a5a;
+  color: #7ef5b2;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #2ecc71;
+}
+
+.hero p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+.heading2{
+    font-size: 2rem;
+    background: -webkit-linear-gradient(#55ff00, #18891f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ===== CARD ===== */
+.card {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.stat-card {
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(46, 204, 113, 0.4);
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  color: #2ecc71;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  opacity: 0.7;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+thead {
+  background: linear-gradient(to right, #1f7a5a, #14532d);
+}
+
+th {
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+td {
+    text-align: center;
+  padding: 12px;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* ===== BADGES ===== */
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.perfect {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.good {
+  background: rgba(255, 165, 0, 0.2);
+  color: orange;
+}
+
+.medi {
+  background: rgba(156, 39, 176, 0.2);
+  color: violet;
+}
+
+/* ===== CHART BOX ===== */
+.chart-box {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+/* ===== CONFUSION ===== */
+#confusionContainer {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}

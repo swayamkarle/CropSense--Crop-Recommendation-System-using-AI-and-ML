@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soil Distribution Analysis - CropSense AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="dots" class="bg-dots" aria-hidden="true"></canvas>
+
+  <main class="soil-page-wrap charts-page-wrap">
+    <header class="soil-topbar">
+      <div class="soil-brand">
+        <div class="soil-brand-icon">🔬</div>
+        <h1>Soil <span>Analysis</span></h1>
+      </div>
+
+      <nav class="soil-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="soil-analysis.html">Upload</a>
+        <a href="performance.html">Performance</a>
+        <a href="charts.html" class="is-active">Chart</a>
+      </nav>
+    </header>
+
+    <section class="charts-hero">
+      <div class="charts-hero-icon">📊</div>
+      <h2>Soil Distribution <span>Analysis</span></h2>
+      <p>Visual representation of soil type distribution in the dataset</p>
+    </section>
+
+    <section class="charts-banner">
+      <h3>📈 Interactive 3D Visualization</h3>
+      <p>Explore the distribution of 4 soil types used for training the AI model</p>
+    </section>
+
+    <section class="charts-stat-grid">
+      <article class="charts-stat-card">
+        <h4>TOTAL SOIL TYPES</h4>
+        <div class="charts-stat-value">4</div>
+      </article>
+
+      <article class="charts-stat-card">
+        <h4>DATASET IMAGES</h4>
+        <div class="charts-stat-value">1000+</div>
+      </article>
+
+      <article class="charts-stat-card">
+        <h4>MODEL ACCURACY</h4>
+        <div class="charts-stat-value">99%</div>
+      </article>
+
+      <article class="charts-stat-card">
+        <h4>TRAINING EPOCHS</h4>
+        <div class="charts-stat-value">3</div>
+      </article>
+    </section>
+
+    <section class="pie-chart-section">
+  <div class="pie-chart-card">
+    <h3>🥧 3D Soil Distribution Pie Chart</h3>
+    <div class="pie-chart-subtitle">Soil Type Distribution in Dataset</div>
+
+    <div class="pie-chart-layout">
+      <div class="pie-visual">
+        <div class="pie-chart-3d interactive-pie" id="interactivePie">
+          <div class="pie-hotspot hotspot-alluvial" data-label="Alluvial Soil" data-value="30.8%"></div>
+          <div class="pie-hotspot hotspot-black" data-label="Black Soil" data-value="19.2%"></div>
+          <div class="pie-hotspot hotspot-clay" data-label="Clay Soil" data-value="30.8%"></div>
+          <div class="pie-hotspot hotspot-red" data-label="Red Soil" data-value="19.2%"></div>
+
+          <div class="pie-slice slice-alluvial"><span>30.8%</span></div>
+          <div class="pie-slice slice-black"><span>19.2%</span></div>
+          <div class="pie-slice slice-clay"><span>30.8%</span></div>
+          <div class="pie-slice slice-red"><span>19.2%</span></div>
+
+          <div class="pie-tooltip" id="pieTooltip"></div>
+        </div>
+      </div>
+
+      <div class="pie-legend">
+        <div class="legend-item"><span class="legend-dot alluvial"></span>Alluvial Soil</div>
+        <div class="legend-item"><span class="legend-dot black"></span>Black Soil</div>
+        <div class="legend-item"><span class="legend-dot clay"></span>Clay Soil</div>
+        <div class="legend-item"><span class="legend-dot red"></span>Red Soil</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="soil-characteristics-section">
+      <h3>Soil Types & <span>Characteristics</span></h3>
+
+      <div class="soil-characteristics-grid">
+        <article class="soil-character-card">
+          <div class="soil-character-top">
+            <span class="legend-dot alluvial"></span>
+            <h4>Alluvial Soil (30.8%)</h4>
+          </div>
+          <div class="soil-character-swatch alluvial"></div>
+          <p>Rich in minerals, ideal for rice, wheat, sugarcane, maize, cotton, soybean, and jute cultivation.</p>
+        </article>
+
+        <article class="soil-character-card">
+          <div class="soil-character-top">
+            <span class="legend-dot black"></span>
+            <h4>Black Soil (19.2%)</h4>
+          </div>
+          <div class="soil-character-swatch black"></div>
+          <p>High clay content, excellent for cotton, wheat, jowar, millets, linseed, castor, and sunflower.</p>
+        </article>
+
+        <article class="soil-character-card soil-character-card--active">
+          <div class="soil-character-top">
+            <span class="legend-dot clay square"></span>
+            <h4>Clay Soil (30.8%)</h4>
+          </div>
+          <div class="soil-character-swatch clay"></div>
+          <p>Dense and heavy, suitable for rice, lettuce, chard, broccoli, cabbage, and snap beans.</p>
+        </article>
+
+        <article class="soil-character-card">
+          <div class="soil-character-top">
+            <span class="legend-dot red"></span>
+            <h4>Red Soil (19.2%)</h4>
+          </div>
+          <div class="soil-character-swatch red"></div>
+          <p>Iron-rich, best for cotton, wheat, pulses, millets, oilseeds, and potatoes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="distribution-insights-card">
+      <h3>📊 Distribution Insights</h3>
+      <p>
+        The dataset is carefully balanced with Alluvial and Clay soils representing 40% each of the training data,
+        while Black and Red soils each comprise 25%. This distribution ensures the model learns to distinguish
+        between all soil types effectively, leading to the impressive 99% accuracy rate in production.
+      </p>
+      <p>
+        <strong>Key Benefits:</strong> Balanced training prevents bias, ensures consistent performance across all soil
+        categories, and provides reliable crop recommendations for diverse agricultural regions.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
